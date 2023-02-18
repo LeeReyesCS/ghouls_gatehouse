@@ -1,0 +1,68 @@
+.poem-choices {
+    position: sticky;
+    top: 0;
+    height: 100px;
+    /* background-color: yellow;
+    color: blue;
+     width: 100%; */
+}
+
+.page-content {
+    font-family: 'Crimson Text', serif;
+    text-align: center;
+    min-height: 100vh;
+    align-content: center;
+    margin:auto;
+    width: 400px;
+    padding-bottom: 50px;
+}
+
+
+.poem {
+    /* font-family: 'Crimson Text', serif;
+    text-align: center;
+    min-height: 100vh;
+    align-content: center;
+    margin:auto; */
+    width: 500px;
+    padding-bottom: 50px;
+    /* background-color: aqua; */
+    /* padding-top: 100px; */
+}
+
+.poem-header {
+    padding-bottom: 0;
+    font-family: 'Crimson Text', serif;
+    padding-top: 100px;
+}
+.poem-choices {
+    width: 500px;
+    align-items: center;
+    background-color: white;
+}
+.poem-btn {
+    margin-top: 40px;
+    border: transparent;
+    background-color: white;
+    font-family: 'Crimson Text', serif;
+    text-decoration: underline solid transparent;
+    transition: text-decoration 2s ease;
+    text-underline-offset: 0.75em;
+}
+.poem-btn + .poem-btn {
+    margin-left: 50px;
+
+}
+
+.poem-btn:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-family: 'Crimson Text', serif;
+    /* text-decoration: underline; */
+    text-decoration: underline solid black;
+
+}
+
+.stanza {
+    padding-bottom: 20px;
+}

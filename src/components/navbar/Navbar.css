@@ -14,10 +14,10 @@
 }
 
 .nav {
-  position: relative;
+  position: sticky;
   margin: 0 15%;
   text-align: right;
-  top: 50%;
+  top: 250px;
   transform: translateY(-50%);
   font-weight: bold;
 }
