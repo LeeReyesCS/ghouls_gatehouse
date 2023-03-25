@@ -1,27 +1,34 @@
 import React from 'react';
 import './Contact.css';
-import { send } from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { useState, useRef } from 'react';
 import reCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
 
+  const TEMPLATE_ID = process.env.REACT_APP_EMAIL_TEMPLATE_ID
+  const SERVICE_ID = process.env.REACT_APP_EMAIL_SERVICE_ID
+  const PUBLIC_EMAIL_KEY = process.env.REACT_APP_EMAIL_USER_ID
+
   const captchaRef = useRef(null)
 
   const [toSend, setToSend] = useState({
+    to_name: 'AJ',
     from_name: '',
-    to_name: '',
-    message: '',
-    reply_to: '',
+    email: '',
+    message: ''
   });
 
+
+
   const onSubmit = (e) => {
+
     e.preventDefault();
-    send(
-      'SERVICE ID',
-      'TEMPLATE ID',
+    emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
       toSend,
-      'User ID'
+      PUBLIC_EMAIL_KEY
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
@@ -36,6 +43,13 @@ const Contact = () => {
   };
   return (
     <div>
+       {/* <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init(PUBLIC_EMAIL_KEY) })();
+    </script>
+    <script type="text/javascript"></script> */}
       <section>
         <div className="listing-hero">
           <div className="hero-heading">
@@ -74,14 +88,14 @@ const Contact = () => {
                 onChange={(event)=>handleChange(event)}
                 ></textarea>
               </div>
-              <div className="container-contact-form-btn">
+              {/* <div className="container-contact-form-btn">
                 <reCAPTCHA 
                 sitekey={process.env.REACT_APP_SITE_KEY}
-                ref={captchaRef}/>
+                ref={captchaRef}/> */}
                 <button type="submit" className="contact-form-btn">
                   <span>Send</span>
                 </button>
-              </div>
+              {/* </div> */}
 
               <div className="grid-container">
                 <div className="item1 left-align"><i className="fa fa-lg fa-map-marker-alt"></i> </div>  
