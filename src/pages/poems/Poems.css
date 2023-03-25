@@ -2,9 +2,6 @@
     position: sticky;
     top: 0;
     height: 100px;
-    /* background-color: yellow;
-    color: blue;
-     width: 100%; */
 }
 
 .page-content {
@@ -19,15 +16,8 @@
 
 
 .poem, .poem-1, .poem-2, .poem-3 {
-    /* font-family: 'Crimson Text', serif;
-    text-align: center;
-    min-height: 100vh;
-    align-content: center;
-    margin:auto; */
     width: 500px;
     padding-bottom: 50px;
-    /* background-color: aqua; */
-    /* padding-top: 100px; */
 }
 
 .poem-header {

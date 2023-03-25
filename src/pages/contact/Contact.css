@@ -317,3 +317,8 @@ input {
       margin-top: -6px;
       display: block;
   }
+
+  .page-container {
+    display: flex;
+    flex-direction: row;
+  }

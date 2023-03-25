@@ -3,6 +3,7 @@ import './Contact.css';
 import emailjs from '@emailjs/browser';
 import { useState, useRef } from 'react';
 import reCAPTCHA from "react-google-recaptcha";
+import Navbar from '../../components/navbar/Navbar';
 
 const Contact = () => {
 
@@ -42,14 +43,11 @@ const Contact = () => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
   return (
-    <div>
-       {/* <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init(PUBLIC_EMAIL_KEY) })();
-    </script>
-    <script type="text/javascript"></script> */}
+    <div className = 'page-container'>
+      <div className='sticky-nav'>
+        <Navbar/>
+      </div>
+      <div className='contactme-content'>
       <section>
         <div className="listing-hero">
           <div className="hero-heading">
@@ -105,6 +103,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      </div>
     </div>
   )
 }
