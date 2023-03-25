@@ -10,8 +10,8 @@ const Navbar = () => {
         <li class="active"><a href="#">Welcome</a></li>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/poems">Poems</Link></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Contact Me</a></li>
+        <li><a href="https://www.linkedin.com/in/angelicajmartin/">LinkedIn</a></li>
+        <li><Link to="/contact">Contact Me</Link></li>
         <li></li>
       </ul>
     </nav>

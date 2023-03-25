@@ -5,14 +5,14 @@ import Home from './pages/home/Home';
 import Layout from './layout';
 import { Route, Routes } from 'react-router-dom';
 import Poems from './pages/poems/Poems';
-
+import Contact from './pages/contact/Contact';
 function App() {
-  return (
 
+  return (
     <Routes>
     <Route path ="/" element = {<Layout/>}>
       <Route path ="/poems" element={<Poems/>}></Route>
-      {/* <Route path ="/contact" element ={<Contact/>}></Route> */}
+      <Route path ="/contact" element ={<Contact/>}></Route>
       <Route path ="/" element={<Home/>}></Route>
 
     </Route>

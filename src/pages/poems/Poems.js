@@ -6,8 +6,13 @@ import './Poems.css';
 const Poems = () => {
 
   const ref = useRef(null);
-  const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'});
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
+
+
+  const handleClick = (reference) => {
+    reference.current?.scrollIntoView({behavior: 'smooth'});
   };
   return (
     <div className='content'> 
@@ -18,11 +23,11 @@ const Poems = () => {
     <div className='page-content'>
     <div className='poem-choices'>
       {/* test text */}
-      <button className='poem-btn'>Questions of Innocence</button>
-      <button className='poem-btn'>Funerals</button>
-      <button className='poem-btn'>The Murder of Crows</button>
+      <button className='poem-btn' onClick={()=>handleClick(ref)}>Questions of Innocence</button>
+      <button className='poem-btn' onClick={()=>handleClick(ref2)}>Funerals</button>
+      <button className='poem-btn' onClick={()=>handleClick(ref3)}>The Murder of Crows</button>
     </div>
-    <div className = "poem">
+    <div className = "poem" ref={ref}>
 
 <h2 className = "poem-header"> Questions of Innocence </h2>
 <div className = "stanza">
@@ -46,7 +51,7 @@ const Poems = () => {
 <p className = "poem-line">I question the innocence of myself.</p>
 </div>
 
-<div className = "poem">
+<div className = "poem" ref={ref2}>
 
 <h2 className = "poem-header"> Funerals </h2>
 
@@ -80,7 +85,7 @@ const Poems = () => {
 
 
 
-<div className = "poem">
+<div className = "poem" ref={ref3}>
 <h2 className = "poem-header"> The Murder of Crows </h2>
 
 <div className = "stanza">
